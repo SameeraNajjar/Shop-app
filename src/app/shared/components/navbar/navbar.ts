@@ -1,4 +1,4 @@
-import { Component ,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../../core/services/cart.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -8,7 +8,7 @@ import { SearchService } from '../../../core/services/search.service';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterModule,FormsModule],
+  imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css'
 })
@@ -16,17 +16,15 @@ export class Navbar implements OnInit {
   cartCount = 0;
   searchTerm = '';
 
-
-  constructor(private cart: CartService, private searchService: SearchService) {}
+  constructor(private cart: CartService, private searchService: SearchService) { }
 
   ngOnInit() {
     this.cart.items$.subscribe(items => {
       this.cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
     });
   }
-
+  // Push the search term to the service as the user types
   onSearchChange() {
-    // Push the search term to the service as the user types
     this.searchService.setSearchTerm(this.searchTerm);
   }
 }

@@ -16,6 +16,7 @@ export class Navbar implements OnInit {
   cartCount = 0;
   searchTerm = '';
 
+
   constructor(private cart: CartService, private searchService: SearchService) {}
 
   ngOnInit() {

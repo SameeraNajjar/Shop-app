@@ -1,0 +1,33 @@
+<nav class="flex flex-wrap items-center justify-between p-4 border-b bg-white">
+  <!-- Left: Logo -->
+  <div class="flex items-center space-x-3">
+    <div class="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center">S</div>
+    <span class="font-semibold text-lg">Store</span>
+  </div>
+
+  <!-- Center: Search Bar -->
+  <div class="flex-1 mx-6 max-w-md">
+    <div class="relative">
+      <input
+        [(ngModel)]="searchTerm"
+        name="search"
+        type="text"
+        placeholder="Search by product or category..."
+        (ngModelChange)="onSearchChange()"
+        class="w-full border border-gray-300 rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-black transition"
+      />
+      <i class="bi bi-search absolute left-3 top-2.5 text-gray-500"></i>
+    </div>
+  </div>
+
+  <!-- Right: Links & Cart -->
+  <div class="flex items-center gap-6">
+    <a routerLink="/" class="hover:underline">Shop</a>
+    <a routerLink="/cart" class="relative">
+      <i class="bi bi-cart text-xl"></i>
+      <span class="absolute -top-2 -right-2 inline-block rounded-full px-1 text-xs bg-black text-white">
+        {{ cartCount }}
+      </span>
+    </a>
+  </div>
+</nav>

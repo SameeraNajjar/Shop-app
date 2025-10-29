@@ -1,0 +1,67 @@
+<div
+  *ngIf="visible"
+  class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+>
+  <div
+    class="bg-white w-full max-w-5xl rounded-2xl shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2"
+  >
+    <!-- Left Section -->
+    <div class="p-8">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold">Secure Checkout</h2>
+        <button (click)="close.emit()" class="text-gray-500 hover:text-black text-xl">&times;</button>
+      </div>
+
+      <p class="text-gray-500 mb-6">🔒 Your payment is secure</p>
+
+      <h3 class="font-semibold mb-4 text-lg">Shipping Address</h3>
+      <form class="grid grid-cols-2 gap-4">
+        <input [(ngModel)]="firstName" name="firstName" type="text" placeholder="First Name" class="border p-2 rounded" />
+        <input [(ngModel)]="lastName" name="lastName" type="text" placeholder="Last Name" class="border p-2 rounded" />
+        <input [(ngModel)]="email" name="email" type="email" placeholder="Email" class="border p-2 rounded col-span-2" />
+        <input [(ngModel)]="phone" name="phone" type="tel" placeholder="Phone" class="border p-2 rounded col-span-2" />
+        <input [(ngModel)]="address" name="address" type="text" placeholder="Address" class="border p-2 rounded col-span-2" />
+        <input [(ngModel)]="city" name="city" type="text" placeholder="City" class="border p-2 rounded" />
+        <input [(ngModel)]="state" name="state" type="text" placeholder="State" class="border p-2 rounded" />
+        <input [(ngModel)]="zip" name="zip" type="text" placeholder="ZIP Code" class="border p-2 rounded col-span-2" />
+      </form>
+
+      <button
+        (click)="onConfirm()"
+        class="bg-black text-white w-full py-3 rounded-lg mt-6 hover:bg-gray-800 transition"
+      >
+        Confirm Order
+      </button>
+    </div>
+
+    <!-- Right Section -->
+    <div class="bg-gray-50 p-8">
+      <h3 class="font-semibold mb-4 text-lg">Order Summary</h3>
+      <div class="space-y-4 max-h-[400px] overflow-y-auto">
+        <div
+          *ngFor="let item of items"
+          class="flex items-center justify-between border-b pb-2"
+        >
+          <div class="flex items-center gap-4">
+            <img
+              [src]="item.product.image"
+              alt="{{ item.product.title }}"
+              class="w-16 h-16 rounded-lg object-cover"
+            />
+            <div>
+              <p class="font-medium">{{ item.product.title }}</p>
+              <p class="text-sm text-gray-500">Qty: {{ item.quantity }}</p>
+            </div>
+          </div>
+          <p class="font-semibold">{{ (item.product.price * item.quantity) | currency }}</p>
+        </div>
+      </div>
+
+      <hr class="my-4" />
+      <div class="flex justify-between text-lg font-bold">
+        <span>Total</span>
+        <span>{{ total | currency }}</span>
+      </div>
+    </div>
+  </div>
+</div>

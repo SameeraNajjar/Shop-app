@@ -1,0 +1,8 @@
+/* Optional minor styling tweaks */
+.btn {
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "p1",
+    "title": "Premium Wireless Headphones",
+    "price": 299.99,
+    "image": "assets/headphones.jpg",
+    "category": "Electronics",
+    "rating": 4.8,
+    "description": "Experience pure sound with noise cancellation, 30-hour battery life, and comfortable over-ear design.",
+    "features": [
+      "Active Noise Cancellation",
+      "Bluetooth 5.3 Connectivity",
+      "30 Hours Battery Life",
+      "Fast USB-C Charging"
+    ],
+    "stock": 25
+  },
+  {
+    "id": "p4",
+    "title": "Designer Sunglasses",
+    "price": 199.99,
+    "image": "assets/designer-sunglasses.png",
+    "category": "Accessories",
+    "rating": 4.4,
+    "description": "Elegant sunglasses crafted with UV400 lenses and a lightweight metal frame for lasting comfort.",
+    "features": [
+      "UV400 Protection",
+      "Scratch-Resistant Lenses",
+      "Lightweight Metal Frame",
+      "Includes Premium Case"
+    ],
+    "stock": 30
+  },
+    {
+    "id": "p3",
+    "title": "Wireless Speaker",
+    "price": 179.99,
+    "image": "assets/wireless-speaker.jpg",
+    "category": "Electronics",
+    "rating": 4.7,
+    "description": "Compact and powerful speaker with deep bass and crystal-clear audio for every occasion.",
+    "features": [
+      "360° Sound",
+      "IPX7 Waterproof",
+      "10 Hours Battery Life",
+      "Built-in Microphone"
+    ],
+    "stock": 40
+  },
+  {
+    "id": "p5",
+    "title": "Leather Backpack",
+    "price": 249.99,
+    "image": "assets/brown-leather-backpack.png",
+    "category": "Bags",
+    "rating": 4.6,
+    "description": "Handcrafted full-grain leather backpack ideal for work, travel, or study with ample compartments.",
+    "features": [
+      "Full-Grain Leather",
+      "Laptop Compartment",
+      "Adjustable Shoulder Straps",
+      "Durable Metal Zippers"
+    ],
+    "stock": 15
+  },
+  {
+    "id": "p6",
+    "title": "Burgundy Sunglasses",
+    "price": 100,
+    "image": "assets/Sunglasses.jpg",
+    "category": "Accessories",
+    "rating": 4.9,
+    "description": "Stylish burgundy sunglasses with lightweight acetate frames and UV400 lenses, perfect for vibrant eye protection on outdoor adventures.",
+    "features": [
+      "UV400 Protection",
+      "Lightweight Acetate Frames",
+      "Polarized Lenses",
+      "Adjustable Nose Pads"
+    ],
+    "stock": 20
+  },
+    {
+    "id": "p2",
+    "title": "Luxury Watch",
+    "price": 599.99,
+    "image": "assets/watch.jpg",
+    "category": "Electronics",
+    "rating": 4.9,
+    "description": "A timeless luxury timepiece with sapphire crystal glass, precision Swiss movement, and leather strap.",
+    "features": [
+      "Swiss Quartz Movement",
+      "Sapphire Crystal Glass",
+      "Water Resistant (50m)",
+      "Genuine Leather Strap"
+    ],
+    "stock": 10
+  }
+]

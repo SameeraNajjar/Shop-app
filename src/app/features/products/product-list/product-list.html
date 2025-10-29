@@ -1,0 +1,18 @@
+<div class="container mx-auto p-6">
+  <h1 class="text-2xl font-semibold mb-6 text-center">Featured Collection</h1>
+  <h3 class="text-gray-600 text-center mb-10">
+    Handpicked selection of premium products for discerning customers
+  </h3>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <app-product-card 
+      *ngFor="let p of filteredProducts"
+      [product]="p"
+      (click)="onProductClick(p)">
+    </app-product-card>
+  </div>
+
+  <div *ngIf="filteredProducts.length === 0" class="text-center text-gray-500 mt-10">
+    No products found matching your search.
+  </div>
+</div>

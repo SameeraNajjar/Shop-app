@@ -1,0 +1,43 @@
+<div
+  class="flex items-center justify-between bg-white rounded-[12px] p-4 shadow-[0_1px_3px_rgba(0,0,0,0.1)]"
+>
+  <!-- Product Image -->
+  <img
+    [src]="item.product.image"
+    [alt]="item.product.title"
+    class="w-[80px] h-[80px] rounded-[8px] object-cover"
+  />
+
+  <!-- Product Details -->
+  <div class="flex-1 ml-4">
+    <h3 class="text-lg font-semibold mb-1">{{ item.product.title }}</h3>
+    <p class="text-gray-700 mb-2">{{ item.product.price | currency }}</p>
+
+    <div class="flex items-center gap-2">
+      <button
+        class="border border-gray-300 bg-transparent w-[25px] h-[25px] rounded-full cursor-pointer flex items-center justify-center hover:bg-gray-100"
+        (click)="decrement()"
+      >
+        −
+      </button>
+      <span class="text-base">{{ item.quantity }}</span>
+      <button
+        class="border border-gray-300 bg-transparent w-[25px] h-[25px] rounded-full cursor-pointer flex items-center justify-center hover:bg-gray-100"
+        (click)="increment()"
+      >
+        +
+      </button>
+    </div>
+  </div>
+
+  <!-- Item Total -->
+  <div class="text-right ml-4">
+    <p class="text-gray-800 mb-1">{{ subtotal | currency }}</p>
+    <button
+      class="bg-transparent border-0 text-danger text-[1.2rem] cursor-pointer hover:text-red-600"
+      (click)="remove()"
+    >
+      <i class="fa fa-trash"></i>
+    </button>
+  </div>
+</div>
